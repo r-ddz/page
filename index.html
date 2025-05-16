@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 定义文档使用的字符编码，确保在不同浏览器中能正确显示文字 -->
+    <meta charset="UTF-8">
+    <!-- 设置视口，使页面在移动设备上能够正确显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 页面标题，显示在浏览器的标签页上 -->
+    <title>我的网页标题</title>
+    <!-- 设定网页的图标，显示在浏览器的标签页上 -->
+    <link rel="icon" href="favicon.ico">
+	
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        /* 响应式布局样式 */
+        .container {
+            max-width: 800px; /* 限制最大宽度 */
+            margin: 0 auto; /* 水平居中 */
+            padding: 20px;
+        }
+        /* 针对小屏幕设备的样式 */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 10px; /* 减少内边距以适应小屏幕 */
+            }
+            /* 可以添加更多小屏幕设备的样式调整 */
+        }
+    </style>
+	
+	<script>
+        function showDivContent() {
+            var divElement = document.getElementById('myDiv');
+            divElement.innerHTML = '<p>这是新的内容。</p><p>可以包含任何HTML标签。</p>';
+        }
+    </script>
+	
+</head>
+<body>
+    <!-- 网页内容放在这里 -->
+    <h1>欢迎来到我的网页</h1>
+    <p>这是一个简单的HTML页面示例。</p>
+	
+	<div id="myDiv" style="border: none; padding: 20px; background-color: #f0f0f0;">
+        <p>这是一个隐藏边框的div元素。</p>
+        <p>您可以在这里放置更多的内容或子元素。</p>
+    </div>
+	
+    <button onclick="showDivContent()">点击弹框显示div内容</button>
+	
+</body>
+</html>
