@@ -12,8 +12,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         ];
 
         const jsonFiles = [];
-        files.forEach(file => jsonFiles.push(`/static/json/${file}.json`));
-        secretFiles.forEach(file => jsonFiles.push(`/static/json/secret/${file}.json`));
+        files.forEach(file => jsonFiles.push(`static/json/${file}.json`));
+        secretFiles.forEach(file => jsonFiles.push(`static/json/secret/${file}.json`));
 
         // 使用Promise.all并行获取所有分类的数据
         const categories = await Promise.all(jsonFiles.map(file => fetch(file).then(res => res.json())));
